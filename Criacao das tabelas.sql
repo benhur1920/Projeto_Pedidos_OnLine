@@ -1,15 +1,14 @@
-create database Pedidos_online;
-use Pedidos_online;
+create database Pedidos_online1;
+use Pedidos_online1;
 
--- Criacao das tabelas 
 -- Tabela Cliente
 CREATE TABLE IF NOT EXISTS Cliente (
     Id_cliente INT AUTO_INCREMENT PRIMARY KEY,
     Nome VARCHAR(100) NOT NULL,
     CPF CHAR(14) NOT NULL,
     E_mail VARCHAR(100) NOT NULL,
-    Telefone VARCHAR(20) -- Pode ser NULL
-);
+    Telefone VARCHAR(20) -- Pode ser NULL para teste left e right join
+); 
 
 -- Tabela Fornecedor
 CREATE TABLE IF NOT EXISTS Fornecedor (
@@ -30,31 +29,29 @@ CREATE TABLE IF NOT EXISTS Produto (
     FOREIGN KEY (Id_Fornecedor) REFERENCES Fornecedor(Id_Fornecedor) ON DELETE RESTRICT
 );
 
--- Tabela Pagamento_Pedido
-CREATE TABLE IF NOT EXISTS Pagamento_Pedido (
-    Id_pagamento INT NOT NULL,
-    Id_Pedido INT NOT NULL,
+-- Tabela Pedido_Pagamento
+CREATE TABLE IF NOT EXISTS Pedido_pagamento (
+    Id_Pedido_pagamento INT AUTO_INCREMENT PRIMARY KEY,
     Valor_pago DECIMAL(10,2) NOT NULL,
     Pagamento_efetuado BOOLEAN NOT NULL,
     Data_pagamento DATE,
     Data_pedido DATE,
     Nr_pedido VARCHAR(50) NOT NULL,
     Id_cliente INT NOT NULL,
-    PRIMARY KEY (Id_pagamento, Id_Pedido),
     FOREIGN KEY (Id_cliente) REFERENCES Cliente(Id_cliente) ON DELETE RESTRICT
 );
 
--- Tabela Itens_Pedido (associação Pedido–Produto)
+-- Tabela Itens_Pedido
 CREATE TABLE IF NOT EXISTS Itens_Pedido (
-    Id_pagamento INT NOT NULL,
-    Id_Pedido INT NOT NULL,
+    Id_Itens_Pedido INT AUTO_INCREMENT PRIMARY KEY,
+    Id_Pedido_pagamento INT NOT NULL,
     Id_Produto INT NOT NULL,
     Quantidade INT NOT NULL,
     Valor_unitario DECIMAL(10,2) NOT NULL,
-    PRIMARY KEY (Id_pagamento, Id_Pedido, Id_Produto),
-    FOREIGN KEY (Id_pagamento, Id_Pedido) REFERENCES Pagamento_Pedido(Id_pagamento, Id_Pedido) ON DELETE CASCADE,
+    FOREIGN KEY (Id_Pedido_pagamento) REFERENCES Pedido_pagamento(Id_Pedido_pagamento) ON DELETE CASCADE,
     FOREIGN KEY (Id_Produto) REFERENCES Produto(Id_Produto) ON DELETE RESTRICT
 );
+
 
 
 -- Tabela Entrega
@@ -62,18 +59,16 @@ CREATE TABLE IF NOT EXISTS Entrega (
     Id_entrega INT AUTO_INCREMENT PRIMARY KEY,
     Data_envio DATE,
     Data_entrega DATE,
-    Id_pagamento INT NOT NULL,
-    Id_Pedido INT NOT NULL,
-    FOREIGN KEY (Id_pagamento, Id_Pedido) REFERENCES Pagamento_Pedido(Id_pagamento, Id_Pedido) ON DELETE CASCADE
+    Id_Pedido_pagamento INT NOT NULL,
+    FOREIGN KEY (Id_Pedido_pagamento) REFERENCES Pedido_pagamento(Id_Pedido_pagamento) ON DELETE CASCADE
 );
 
 -- Tabela Forma_pagamento
 CREATE TABLE IF NOT EXISTS Forma_pagamento (
     Id_Forma_pagamento INT AUTO_INCREMENT PRIMARY KEY,
     Tipo_pagamento ENUM('Pix', 'Cartao', 'Debito', 'Boleto') NOT NULL,
-    Id_pagamento INT NOT NULL,
-    Id_Pedido INT NOT NULL,
-    FOREIGN KEY (Id_pagamento, Id_Pedido) REFERENCES Pagamento_Pedido(Id_pagamento, Id_Pedido) ON DELETE RESTRICT
+    Id_Pedido_pagamento INT NOT NULL,
+    FOREIGN KEY (Id_Pedido_pagamento) REFERENCES Pedido_pagamento(Id_Pedido_pagamento) ON DELETE RESTRICT
 );
 
 -- Mostrar as tabelas

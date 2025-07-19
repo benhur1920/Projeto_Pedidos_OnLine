@@ -1,11 +1,10 @@
-
 -- Iniciando com mais fáceis e aumentando a dificuldade
 
 -- 1) Listar os clientes
 select * from cliente;
 
--- 2) Listar os pagamentos
-select * from pagamento_pedido;
+-- 2) Listar os pedidos
+select * from pedido_pagamento;
 
 -- 3) Listar os itens pedidos
 select * from itens_pedido;
@@ -24,7 +23,7 @@ SELECT
 FROM 
     cliente AS c
 JOIN 
-    pagamento_pedido AS pp 
+    pedido_pagamento AS pp 
 ON c.Id_cliente = pp.Id_cliente
 GROUP BY 
     c.Nome
@@ -38,7 +37,7 @@ SELECT
 FROM 
     cliente AS c
 JOIN 
-    pagamento_pedido AS pp 
+    pedido_pagamento AS pp 
     ON c.Id_cliente = pp.Id_cliente
 GROUP BY 
     c.Nome
@@ -86,11 +85,11 @@ ORDER BY
 
 -- 10) Contar quantos pedidos nao foram pagos
 SELECT COUNT(*) AS total_pedidos_nao_pagos 
-FROM pagamento_pedido
+FROM pedido_pagamento
 WHERE Pagamento_efetuado = false;
 
--- 11) Selecionar pedidos nao pagado
-SELECT * FROM Pagamento_Pedido 
+-- 11) Selecionar pedidos nao pagos
+SELECT * FROM pedido_pagamento 
 WHERE Pagamento_efetuado = false;
 
 -- 12) Selecionar os Clientes, fornecedor, numero de pedidos, quantidade, valor unitarios, valor total do pedido e o nome do produtos dos clientes que nao pagaram os pedidos
@@ -106,13 +105,13 @@ SELECT
 FROM 
     cliente AS c
 JOIN 
-    pagamento_pedido AS pp
+    pedido_pagamento AS pp
 ON 
 	c.Id_cliente = pp.Id_Cliente
 JOIN 
     itens_pedido AS i
 ON 
-	pp.Id_Pedido = i.Id_Pedido
+	pp.Id_Pedido_pagamento = i.Id_Pedido_pagamento
 JOIN 
     produto AS p
 ON 
@@ -133,13 +132,13 @@ SELECT
 FROM 
     cliente AS c
 JOIN 
-    pagamento_pedido AS pp
+    pedido_pagamento AS pp
 ON 
 	c.Id_cliente = pp.Id_cliente
 JOIN 
     itens_pedido AS i
 ON 
-	pp.Id_Pedido = i.Id_pedido
+	pp.Id_Pedido_pagamento = i.Id_Pedido_pagamento
 GROUP BY 
 	c.Nome
 order by c.Nome;
@@ -155,13 +154,13 @@ SELECT
 FROM 
     cliente AS c
 JOIN 
-    pagamento_pedido AS pp
+    pedido_pagamento AS pp
 ON 
 	c.Id_cliente = pp.Id_cliente
 JOIN 
     itens_pedido AS i
 ON 
-	pp.Id_Pedido = i.Id_pedido
+	pp.Id_Pedido_pagamento = i.Id_Pedido_pagamento
 GROUP BY 
 	-- precisa aumentar o grupo de agregacao para ver os que pagou e nao pagou e data pagamento
 	c.Nome, pp.Nr_pedido, pp.Pagamento_efetuado, pp.Data_pagamento 
@@ -181,18 +180,18 @@ SELECT
 FROM 
     cliente AS c
 JOIN 
-    pagamento_pedido AS pp
+    pedido_pagamento AS pp
 ON 
 	c.Id_cliente = pp.Id_cliente
 JOIN 
     itens_pedido AS i
 ON 
-	pp.Id_Pedido = i.Id_pedido
+	pp.Id_Pedido_pagamento = i.Id_Pedido_pagamento
     
 JOIN 
     forma_pagamento AS fp
 ON 
-	pp.Id_Pedido = fp.Id_pedido
+	pp.Id_Pedido_pagamento = fp.Id_Pedido_pagamento
 GROUP BY 
 	-- precisa aumentar o grupo de agregacao para ver os que pagou e nao pagou e data pagamento, mais forma pagamento
 	c.Nome, pp.Nr_pedido, pp.Pagamento_efetuado,pp.Data_pedido, pp.Data_pagamento, fp.Tipo_pagamento
@@ -207,9 +206,9 @@ SELECT
 FROM 
     forma_pagamento AS fp
 JOIN 
-    pagamento_pedido AS pp
+    pedido_pagamento AS pp
 ON 
-	fp.Id_pedido = pp.Id_pedido
+	fp.Id_Pedido_pagamento = pp.Id_Pedido_pagamento
 WHERE 
     pp.Pagamento_efetuado = true
 GROUP BY 
@@ -227,13 +226,13 @@ SELECT
 FROM 
     cliente AS c
 JOIN 
-    pagamento_pedido AS pp 
+    pedido_pagamento AS pp 
 ON 
 	c.Id_cliente = pp.Id_cliente
 JOIN 
     itens_pedido AS i 
 ON 
-	pp.Id_pagamento = i.Id_pagamento AND pp.Id_pedido = i.Id_pedido
+	pp.Id_Pedido_pagamento = i.Id_Pedido_pagamento AND pp.Id_Pedido_pagamento = i.Id_Pedido_pagamento
 JOIN 
     produto AS pr ON i.Id_Produto = pr.Id_Produto
 
@@ -249,15 +248,14 @@ SELECT
 FROM 
     cliente AS c
 JOIN 
-    pagamento_pedido AS pp
+    pedido_pagamento AS pp
     ON c.Id_cliente = pp.Id_cliente
 JOIN 
     itens_pedido AS i
-    ON pp.Id_pagamento = i.Id_pagamento AND pp.Id_pedido = i.Id_pedido
+    ON pp.Id_Pedido_pagamento = i.Id_Pedido_pagamento AND pp.Id_Pedido_pagamento = i.Id_Pedido_pagamento
     order by c.Nome;
 
 -- 19) Selecione o nome do cliente, nr pedido, valor pago, data pedido, data pagamento, data envio, data entrega e tipo de pagamento
-
 
 SELECT 
     c.Nome AS Cliente,
@@ -272,18 +270,18 @@ SELECT
 FROM 
     cliente AS c
 JOIN 
-    pagamento_pedido AS pp 
+    pedido_pagamento AS pp 
 ON 
 	c.Id_cliente = pp.Id_cliente
 
 JOIN 
     forma_pagamento AS fp 
 ON 
-	pp.id_pedido = fp.Id_pedido
+	pp.Id_Pedido_pagamento = fp.Id_Pedido_pagamento
 JOIN 
     entrega AS e
 ON 
-	pp.id_pedido = e.Id_pedido
+	pp.Id_Pedido_pagamento = e.Id_Pedido_pagamento
 order by c.Nome;
 
 
@@ -295,16 +293,16 @@ SELECT DISTINCT TIPO_PAGAMENTO
   SELECT c.Nome AS Cliente,
        ROUND(AVG(pp.valor_pago),2) AS Tiket_medio
   FROM cliente AS C
-  JOIN pagamento_pedido as pp
+  JOIN pedido_pagamento as pp
   ON c.id_cliente = pp.id_cliente
   GROUP BY cliente
   ORDER BY cliente;
   
-  -- 22) Selecionar os treis maiores clientes e os valores comprados pelos mesmos
+  -- 22) Selecionar os 3 maiores clientes e os valores comprados pelos mesmos
  SELECT c.Nome AS Cliente,
        pp.Valor_pago AS Maior_valor
 FROM cliente AS c
-JOIN pagamento_pedido AS pp
+JOIN pedido_pagamento AS pp
   ON c.Id_cliente = pp.Id_cliente
 ORDER BY pp.Valor_pago DESC
 LIMIT 3;
@@ -313,7 +311,7 @@ LIMIT 3;
 -- 23) Mostrar o faturamento  por dia 
 SELECT Data_pagamento,
        SUM(Valor_pago) AS Total_faturado
-FROM pagamento_pedido
+FROM pedido_pagamento
 WHERE Pagamento_efetuado = TRUE
 GROUP BY Data_pagamento
 ORDER BY Data_pagamento;
@@ -326,7 +324,7 @@ FROM (
         Data_pagamento,
         SUM(Valor_pago) AS Total_faturado
     FROM 
-        pagamento_pedido
+        pedido_pagamento
     WHERE 
         Pagamento_efetuado = TRUE
     GROUP BY 
@@ -341,9 +339,9 @@ FROM (
 SELECT p.Data_pagamento,
 	   fp.Tipo_pagamento,
        SUM(Valor_pago) AS Total_faturado
-FROM pagamento_pedido AS p
+FROM pedido_pagamento AS p
 JOIN forma_pagamento as fp
-ON p.id_pagamento = fp.id_pagamento
+ON p.Id_Pedido_pagamento = fp.Id_Pedido_pagamento
 WHERE Pagamento_efetuado = TRUE
 GROUP BY p.Data_pagamento, fp.Tipo_pagamento
 ORDER BY Data_pagamento;
@@ -352,10 +350,10 @@ ORDER BY Data_pagamento;
 -- 26) Selecionar os clientes que estão sem o telefone cadastrados para contato via e-mail usando o left join
 
 SELECT c.nome AS Cliente,
-       COUNT(pp.id_pedido) AS total_notas,
+       COUNT(pp.Id_Pedido_pagamento) AS total_notas,
        c.e_mail AS E_mail
 FROM cliente AS c
-LEFT JOIN pagamento_pedido AS pp
+LEFT JOIN pedido_pagamento AS pp
   ON c.id_cliente = pp.id_cliente
 WHERE c.telefone IS NULL
 GROUP BY c.nome, c.e_mail;
@@ -364,13 +362,13 @@ GROUP BY c.nome, c.e_mail;
 SELECT 
     p.Nome_produto,
     f.Nome_fornecedor,
-    COUNT(p.Id_Produto) AS Mais_vendido
+    sum(p.Id_Produto) AS Mais_vendido
 FROM 
     produto AS p
 JOIN 
     Itens_pedido AS i ON p.id_produto = i.id_produto
 JOIN 
-    Pagamento_Pedido AS pp ON i.Id_pedido = pp.Id_pedido
+    pedido_pagamento AS pp ON i.Id_Pedido_pagamento = pp.Id_Pedido_pagamento
 JOIN 
     Fornecedor AS f ON f.id_fornecedor = p.Id_fornecedor
 WHERE 

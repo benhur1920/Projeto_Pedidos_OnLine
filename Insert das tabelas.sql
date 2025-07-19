@@ -2,473 +2,494 @@
 USE Pedidos_online;
 
 -- INSERTS PARA TABELA Fornecedor
-INSERT INTO Fornecedor (Id_Fornecedor, Nome_fornecedor, CNPJ, Telefone, Email) VALUES (1, 'Gonçalves S/A', '27.385.490/0001-48', '31 0809 2129', 'gonçalves.s/a@exemplo.com');
-INSERT INTO Fornecedor (Id_Fornecedor, Nome_fornecedor, CNPJ, Telefone, Email) VALUES (2, 'Melo Alves S/A', '87.154.623/0001-05', '+55 (011) 5428 8403', 'melo.alves.s/a@exemplo.com');
-INSERT INTO Fornecedor (Id_Fornecedor, Nome_fornecedor, CNPJ, Telefone, Email) VALUES (3, 'da Rocha', '53.290.846/0001-70', '(071) 3448 4793', 'da.rocha@exemplo.com');
-INSERT INTO Fornecedor (Id_Fornecedor, Nome_fornecedor, CNPJ, Telefone, Email) VALUES (4, 'Nogueira', '48.632.591/0001-46', '(084) 5868 8064', 'nogueira@exemplo.com');
-INSERT INTO Fornecedor (Id_Fornecedor, Nome_fornecedor, CNPJ, Telefone, Email) VALUES (5, 'Rezende', '26.835.470/0001-69', '(041) 2281-8213', 'rezende@exemplo.com');
-INSERT INTO Fornecedor (Id_Fornecedor, Nome_fornecedor, CNPJ, Telefone, Email) VALUES (6, 'Costela', '68.490.257/0001-02', '(021) 2208-9873', 'costela@exemplo.com');
-INSERT INTO Fornecedor (Id_Fornecedor, Nome_fornecedor, CNPJ, Telefone, Email) VALUES (7, 'Martins S/A', '10.764.285/0001-90', '+55 51 3627 1467', 'martins.s/a@exemplo.com');
-INSERT INTO Fornecedor (Id_Fornecedor, Nome_fornecedor, CNPJ, Telefone, Email) VALUES (8, 'Barbosa Moraes - EI', '65.342.179/0001-00', '+55 (031) 0418 8943', 'barbosa.moraes.-.ei@exemplo.com');
-INSERT INTO Fornecedor (Id_Fornecedor, Nome_fornecedor, CNPJ, Telefone, Email) VALUES (9, 'Cardoso - ME', '49.182.560/0001-01', '61 4460 1098', 'cardoso.-.me@exemplo.com');
-INSERT INTO Fornecedor (Id_Fornecedor, Nome_fornecedor, CNPJ, Telefone, Email) VALUES (10, 'Duarte Moura e Filhos', '24.159.360/0001-07', '+55 (061) 6230-0561', 'duarte.moura.e.filhos@exemplo.com');
+INSERT INTO Fornecedor ( Nome_fornecedor, CNPJ, Telefone, Email)
+VALUES 
+('Gonçalves S/A', '27.385.490/0001-48', '31 0809 2129', 'gonçalves.s/a@exemplo.com'),
+('Melo Alves S/A', '87.154.623/0001-05', '+55 (011) 5428 8403', 'melo.alves.s/a@exemplo.com'),
+('da Rocha', '53.290.846/0001-70', '(071) 3448 4793', 'da.rocha@exemplo.com'),
+('Nogueira', '48.632.591/0001-46', '(084) 5868 8064', 'nogueira@exemplo.com'),
+('Rezende', '26.835.470/0001-69', '(041) 2281-8213', 'rezende@exemplo.com'),
+('Costela', '68.490.257/0001-02', '(021) 2208-9873', 'costela@exemplo.com'),
+('Martins S/A', '10.764.285/0001-90', '+55 51 3627 1467', 'martins.s/a@exemplo.com'),
+('Barbosa Moraes - EI', '65.342.179/0001-00', '+55 (031) 0418 8943', 'barbosa.moraes.-.ei@exemplo.com'),
+('Cardoso - ME', '49.182.560/0001-01', '61 4460 1098', 'cardoso.-.me@exemplo.com'),
+('Duarte Moura e Filhos', '24.159.360/0001-07', '+55 (061) 6230-0561', 'duarte.moura.e.filhos@exemplo.com');
+
 -- INSERTS PARA TABELA Produto
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (1, 'Asperiores', 'P001', 'Omnis quaerat provident necessitatibus illum dolorum adipisci.', 2);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (2, 'Ab', 'P002', 'Nisi ea quae adipisci.', 1);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (3, 'Cum', 'P003', 'Unde aspernatur distinctio cupiditate.', 5);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (4, 'Distinctio', 'P004', 'Voluptatem animi soluta eos quos aut illum illo.', 4);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (5, 'Id', 'P005', 'Debitis assumenda ullam deserunt quisquam non unde.', 4);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (6, 'Quidem', 'P006', 'Vitae voluptatum hic voluptatibus a.', 3);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (7, 'At', 'P007', 'Laudantium dicta eos dignissimos est.', 2);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (8, 'Inventore', 'P008', 'Accusantium consequuntur magnam libero in.', 9);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (9, 'Laudantium', 'P009', 'Magni consequuntur quisquam.', 2);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (10, 'Dolor', 'P010', 'Mollitia quaerat debitis magnam pariatur.', 10);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (11, 'Eaque', 'P011', 'Nam sed sed culpa odit.', 7);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (12, 'Culpa', 'P012', 'Minima at consequuntur ipsum ab nesciunt.', 1);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (13, 'Dolor', 'P013', 'Atque delectus tempora maiores eligendi error libero.', 1);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (14, 'Dolore', 'P014', 'Cum eligendi quidem velit enim.', 2);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (15, 'Nostrum', 'P015', 'Veritatis nisi nisi quis possimus sapiente.', 4);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (16, 'Voluptatum', 'P016', 'Laborum tempore odio natus ea quidem libero.', 4);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (17, 'Perspiciatis', 'P017', 'Omnis animi dolor odit a laborum.', 9);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (18, 'Temporibus', 'P018', 'Deserunt numquam est ad praesentium dolores ad.', 10);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (19, 'Provident', 'P019', 'Debitis sunt hic fugit.', 1);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (20, 'Saepe', 'P020', 'Molestias magni quos a.', 9);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (21, 'A', 'P021', 'Deleniti atque reiciendis pariatur numquam necessitatibus.', 4);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (22, 'Mollitia', 'P022', 'Eum architecto cupiditate incidunt delectus.', 9);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (23, 'Nihil', 'P023', 'Fuga quam asperiores velit natus corporis aliquam.', 7);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (24, 'Ratione', 'P024', 'Perferendis quae incidunt aliquid reprehenderit quo blanditiis.', 4);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (25, 'Reprehenderit', 'P025', 'Dolor sit dolore adipisci cupiditate.', 8);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (26, 'Commodi', 'P026', 'Consequuntur porro quibusdam numquam laboriosam est.', 10);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (27, 'Ad', 'P027', 'Praesentium fuga accusamus cumque est officia tenetur.', 5);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (28, 'Optio', 'P028', 'Esse ratione dolor iste voluptates.', 1);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (29, 'Velit', 'P029', 'Officiis tempora exercitationem.', 3);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (30, 'Doloremque', 'P030', 'Adipisci rerum quia vitae cumque.', 7);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (31, 'Consectetur', 'P031', 'Illum in sed aliquam.', 6);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (32, 'Dolores', 'P032', 'Vel autem asperiores qui.', 5);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (33, 'Sed', 'P033', 'Laudantium dolores alias expedita.', 3);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (34, 'Cupiditate', 'P034', 'Perferendis cupiditate molestias sit deleniti atque aut provident.', 4);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (35, 'Sequi', 'P035', 'Libero occaecati nemo aliquid et.', 6);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (36, 'Possimus', 'P036', 'Possimus commodi excepturi aperiam vel.', 2);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (37, 'Natus', 'P037', 'Voluptates distinctio aspernatur omnis ullam placeat ipsa assumenda.', 2);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (38, 'Natus', 'P038', 'Illo dolores ratione itaque illum.', 7);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (39, 'Et', 'P039', 'Dolorem eos aut.', 2);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (40, 'Dolore', 'P040', 'Neque unde consequatur illum maxime corrupti.', 6);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (41, 'Velit', 'P041', 'Vitae occaecati dolores in error.', 6);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (42, 'Magni', 'P042', 'Quam illo odio consequatur quibusdam.', 10);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (43, 'Eveniet', 'P043', 'Molestiae rem quos enim porro voluptatem esse recusandae.', 5);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (44, 'Repudiandae', 'P044', 'Odit cumque magni praesentium voluptatum repudiandae.', 1);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (45, 'Minima', 'P045', 'Distinctio ipsa eum laboriosam distinctio possimus quia ex.', 8);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (46, 'Perferendis', 'P046', 'Adipisci eveniet consectetur dolore repudiandae quos praesentium odit.', 9);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (47, 'Quos', 'P047', 'Ullam doloribus eum modi sapiente nisi modi eum.', 2);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (48, 'Et', 'P048', 'Cupiditate illo aut officiis commodi ut distinctio.', 7);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (49, 'Eveniet', 'P049', 'Voluptate facilis voluptate voluptate.', 2);
-INSERT INTO Produto (Id_Produto, Nome_produto, Codigo_produto, Descricao, Id_Fornecedor) VALUES (50, 'Optio', 'P050', 'Tempora tempore id sequi.', 9);
+INSERT INTO Produto (Nome_produto, Codigo_produto, Descricao, Id_Fornecedor)
+VALUES 
+('Asperiores', 'P001', 'Omnis quaerat provident necessitatibus illum dolorum adipisci.', 2),
+('Ab', 'P002', 'Nisi ea quae adipisci.', 1),
+('Cum', 'P003', 'Unde aspernatur distinctio cupiditate.', 5),
+('Distinctio', 'P004', 'Voluptatem animi soluta eos quos aut illum illo.', 4),
+('Id', 'P005', 'Debitis assumenda ullam deserunt quisquam non unde.', 4),
+('Quidem', 'P006', 'Vitae voluptatum hic voluptatibus a.', 3),
+('At', 'P007', 'Laudantium dicta eos dignissimos est.', 2),
+('Inventore', 'P008', 'Accusantium consequuntur magnam libero in.', 9),
+('Laudantium', 'P009', 'Magni consequuntur quisquam.', 2),
+('Dolor', 'P010', 'Mollitia quaerat debitis magnam pariatur.', 10),
+('Eaque', 'P011', 'Nam sed sed culpa odit.', 7),
+('Culpa', 'P012', 'Minima at consequuntur ipsum ab nesciunt.', 1),
+('Dolor', 'P013', 'Atque delectus tempora maiores eligendi error libero.', 1),
+('Dolore', 'P014', 'Cum eligendi quidem velit enim.', 2),
+('Nostrum', 'P015', 'Veritatis nisi nisi quis possimus sapiente.', 4),
+('Voluptatum', 'P016', 'Laborum tempore odio natus ea quidem libero.', 4),
+('Perspiciatis', 'P017', 'Omnis animi dolor odit a laborum.', 9),
+('Temporibus', 'P018', 'Deserunt numquam est ad praesentium dolores ad.', 10),
+('Provident', 'P019', 'Debitis sunt hic fugit.', 1),
+('Saepe', 'P020', 'Molestias magni quos a.', 9),
+('A', 'P021', 'Deleniti atque reiciendis pariatur numquam necessitatibus.', 4),
+('Mollitia', 'P022', 'Eum architecto cupiditate incidunt delectus.', 9),
+('Nihil', 'P023', 'Fuga quam asperiores velit natus corporis aliquam.', 7),
+('Ratione', 'P024', 'Perferendis quae incidunt aliquid reprehenderit quo blanditiis.', 4),
+('Reprehenderit', 'P025', 'Dolor sit dolore adipisci cupiditate.', 8),
+('Commodi', 'P026', 'Consequuntur porro quibusdam numquam laboriosam est.', 10),
+('Ad', 'P027', 'Praesentium fuga accusamus cumque est officia tenetur.', 5),
+('Optio', 'P028', 'Esse ratione dolor iste voluptates.', 1),
+('Velit', 'P029', 'Officiis tempora exercitationem.', 3),
+('Doloremque', 'P030', 'Adipisci rerum quia vitae cumque.', 7),
+('Consectetur', 'P031', 'Illum in sed aliquam.', 6),
+('Dolores', 'P032', 'Vel autem asperiores qui.', 5),
+('Sed', 'P033', 'Laudantium dolores alias expedita.', 3),
+('Cupiditate', 'P034', 'Perferendis cupiditate molestias sit deleniti atque aut provident.', 4),
+('Sequi', 'P035', 'Libero occaecati nemo aliquid et.', 6),
+('Possimus', 'P036', 'Possimus commodi excepturi aperiam vel.', 2),
+('Natus', 'P037', 'Voluptates distinctio aspernatur omnis ullam placeat ipsa assumenda.', 2),
+('Natus', 'P038', 'Illo dolores ratione itaque illum.', 7),
+('Et', 'P039', 'Dolorem eos aut.', 2),
+('Dolore', 'P040', 'Neque unde consequatur illum maxime corrupti.', 6),
+('Velit', 'P041', 'Vitae occaecati dolores in error.', 6),
+('Magni', 'P042', 'Quam illo odio consequatur quibusdam.', 10),
+('Eveniet', 'P043', 'Molestiae rem quos enim porro voluptatem esse recusandae.', 5),
+('Repudiandae', 'P044', 'Odit cumque magni praesentium voluptatum repudiandae.', 1),
+('Minima', 'P045', 'Distinctio ipsa eum laboriosam distinctio possimus quia ex.', 8),
+('Perferendis', 'P046', 'Adipisci eveniet consectetur dolore repudiandae quos praesentium odit.', 9),
+('Quos', 'P047', 'Ullam doloribus eum modi sapiente nisi modi eum.', 2),
+('Et', 'P048', 'Cupiditate illo aut officiis commodi ut distinctio.', 7),
+('Eveniet', 'P049', 'Voluptate facilis voluptate voluptate.', 2),
+('Optio', 'P050', 'Tempora tempore id sequi.', 9);
 -- INSERTS PARA TABELA Cliente
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (1, 'Cecília Pinto', '261.895.074-76', 'cecília.pinto@exemplo.com', NULL);
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (2, 'Sr. Vitor Hugo Teixeira', '015.678.394-01', 'sr..vitor.hugo.teixeira@exemplo.com', NULL);
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (3, 'Ana Beatriz Fogaça', '846.975.120-49', 'ana.beatriz.fogaça@exemplo.com', NULL);
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (4, 'Ian Correia', '841.973.052-14', 'ian.correia@exemplo.com', NULL);
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (5, 'Vicente Farias', '983.625.047-65', 'vicente.farias@exemplo.com', NULL);
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (6, 'Nicole Pinto', '394.702.561-07', 'nicole.pinto@exemplo.com', '(081) 2694-1195');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (7, 'Pietro Costa', '204.657.139-80', 'pietro.costa@exemplo.com', '21 0295 7385');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (8, 'Benjamin da Luz', '281.436.597-55', 'benjamin.da.luz@exemplo.com', '81 6627-8776');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (9, 'Ana Carolina Nascimento', '529.307.618-30', 'ana.carolina.nascimento@exemplo.com', '0800 821 8262');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (10, 'Alícia Peixoto', '974.352.810-50', 'alícia.peixoto@exemplo.com', '0300-637-1155');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (11, 'Thomas Duarte', '420.871.536-71', 'thomas.duarte@exemplo.com', '84 3692 1721');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (12, 'Stephany Novaes', '947.506.128-20', 'stephany.novaes@exemplo.com', '(011) 9245-1495');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (13, 'Levi Dias', '275.081.649-11', 'levi.dias@exemplo.com', '11 0640 8566');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (14, 'Ana Júlia Pires', '453.281.076-08', 'ana.júlia.pires@exemplo.com', '+55 (061) 8194 9366');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (15, 'Olivia da Cunha', '485.902.761-20', 'olivia.da.cunha@exemplo.com', '+55 (051) 1812-2833');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (16, 'Rodrigo Pereira', '308.169.524-42', 'rodrigo.pereira@exemplo.com', '+55 (071) 7587-7631');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (17, 'Dra. Clara Cardoso', '631.759.402-34', 'dra..clara.cardoso@exemplo.com', '+55 41 5426 9755');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (18, 'Luiz Fernando da Costa', '597.014.862-85', 'luiz.fernando.da.costa@exemplo.com', '41 6830-1509');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (19, 'Igor Aragão', '273.946.508-47', 'igor.aragão@exemplo.com', '11 0712-7896');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (20, 'Dra. Emilly Porto', '208.615.347-35', 'dra..emilly.porto@exemplo.com', '+55 (061) 4436-7100');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (21, 'Emanuel Lima', '548.291.703-79', 'emanuel.lima@exemplo.com', '(081) 6080-3599');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (22, 'João Pedro da Cruz', '145.876.203-35', 'joão.pedro.da.cruz@exemplo.com', '+55 71 3273 2932');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (23, 'Srta. Stella Melo', '086.541.927-20', 'srta..stella.melo@exemplo.com', '0500 095 2662');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (24, 'Calebe Vieira', '287.049.653-29', 'calebe.vieira@exemplo.com', '+55 84 2127 5975');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (25, 'Dra. Vitória Moraes', '409.632.175-34', 'dra..vitória.moraes@exemplo.com', '+55 (081) 0871 1616');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (26, 'Vitor Gabriel Porto', '672.940.531-70', 'vitor.gabriel.porto@exemplo.com', '(081) 7835 0848');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (27, 'Maria Alice Peixoto', '346.092.187-04', 'maria.alice.peixoto@exemplo.com', '(061) 9495 7666');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (28, 'Ana Júlia Monteiro', '249.760.835-00', 'ana.júlia.monteiro@exemplo.com', '+55 84 6142-8822');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (29, 'Giovanna Martins', '815.790.426-94', 'giovanna.martins@exemplo.com', '+55 11 4632 3014');
-INSERT INTO Cliente (Id_cliente, Nome, CPF, E_mail, Telefone) VALUES (30, 'Marina da Mata', '912.850.673-12', 'marina.da.mata@exemplo.com', '+55 71 3337-4031');
--- INSERTS PARA TABELA Pagamento_Pedido
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (1, 1, 2333.4, True, '2025-02-19', '2025-02-19', 'PED0001', 10);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (2, 2, 1613.91, True, '2025-05-26', '2025-05-26', 'PED0002', 9);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (3, 3, 569.08, True, '2025-04-03', '2025-04-03', 'PED0003', 18);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (4, 4, 404.47, True, '2025-06-17', '2025-06-17', 'PED0004', 27);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (5, 5, 2436.57, True, '2025-05-08', '2025-05-08', 'PED0005', 7);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (6, 6, 2043.45, True, '2025-03-29', '2025-03-29', 'PED0006', 24);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (7, 7, 0, False, NULL, '2025-01-26', 'PED0007', 20);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (8, 8, 350.0, True, '2025-02-17', '2025-02-17', 'PED0008', 25);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (9, 9, 4993.19, True, '2025-05-28', '2025-05-28', 'PED0009', 17);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (10, 10, 0, False, NULL, '2025-02-12', 'PED0010', 1);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (11, 11, 3454.52, True, '2025-02-04', '2025-02-04', 'PED0011', 5);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (12, 12, 82.74, True, '2025-04-28', '2025-04-28', 'PED0012', 29);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (13, 13, 122.18, True, '2025-01-17', '2025-01-17', 'PED0013', 19);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (14, 14, 3632.82, True, '2025-03-17', '2025-03-17', 'PED0014', 17);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (15, 15, 1772.82, True, '2025-01-30', '2025-01-30', 'PED0015', 22);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (16, 16, 1276.64, True, '2025-04-13', '2025-04-13', 'PED0016', 7);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (17, 17, 1749.56, True, '2025-05-11', '2025-05-11', 'PED0017', 2);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (18, 18, 2323.41, True, '2025-06-14', '2025-06-14', 'PED0018', 1);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (19, 19, 199.35, True, '2025-05-09', '2025-05-09', 'PED0019', 10);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (20, 20, 983.64, True, '2025-07-08', '2025-07-08', 'PED0020', 19);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (21, 21, 0, False, NULL, '2025-02-24', 'PED0021', 20);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (22, 22, 1257.48, True, '2025-05-28', '2025-05-28', 'PED0022', 11);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (23, 23, 1773.78, True, '2025-06-27', '2025-06-27', 'PED0023', 18);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (24, 24, 2016.11, True, '2025-06-12', '2025-06-12', 'PED0024', 20);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (25, 25, 329.28, True, '2025-04-24', '2025-04-24', 'PED0025', 9);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (26, 26, 1665.52, True, '2025-05-29', '2025-05-29', 'PED0026', 9);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (27, 27, 0, False, NULL, '2025-06-01', 'PED0027', 25);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (28, 28, 1980.12, True, '2025-02-12', '2025-02-12', 'PED0028', 27);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (29, 29, 1903.92, True, '2025-06-01', '2025-06-01', 'PED0029', 25);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (30, 30, 478.91, True, '2025-03-19', '2025-03-19', 'PED0030', 6);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (31, 31, 1279.38, True, '2025-06-16', '2025-06-16', 'PED0031', 7);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (32, 32, 2439.89, True, '2025-03-13', '2025-03-13', 'PED0032', 9);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (33, 33, 973.81, True, '2025-02-05', '2025-02-05', 'PED0033', 19);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (34, 34, 420.26, True, '2025-05-22', '2025-05-22', 'PED0034', 29);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (35, 35, 1791.14, True, '2025-03-20', '2025-03-20', 'PED0035', 22);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (36, 36, 1738.98, True, '2025-03-12', '2025-03-12', 'PED0036', 20);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (37, 37, 1595.72, True, '2025-03-15', '2025-03-15', 'PED0037', 15);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (38, 38, 1254.77, True, '2025-02-26', '2025-02-26', 'PED0038', 17);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (39, 39, 1776.84, True, '2025-03-07', '2025-03-07', 'PED0039', 20);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (40, 40, 447.4, True, '2025-02-11', '2025-02-11', 'PED0040', 16);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (41, 41, 2842.46, True, '2025-04-17', '2025-04-17', 'PED0041', 6);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (42, 42, 2907.68, True, '2025-02-15', '2025-02-15', 'PED0042', 20);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (43, 43, 1717.44, True, '2025-05-26', '2025-05-26', 'PED0043', 21);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (44, 44, 82.94, True, '2025-05-24', '2025-05-24', 'PED0044', 8);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (45, 45, 0, False, NULL, '2025-04-24', 'PED0045', 14);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (46, 46, 2479.78, True, '2025-07-09', '2025-07-09', 'PED0046', 25);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (47, 47, 3635.05, True, '2025-05-12', '2025-05-12', 'PED0047', 13);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (48, 48, 587.28, True, '2025-03-23', '2025-03-23', 'PED0048', 5);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (49, 49, 612.44, True, '2025-04-27', '2025-04-27', 'PED0049', 11);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (50, 50, 1273.84, True, '2025-03-07', '2025-03-07', 'PED0050', 8);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (51, 51, 1928.87, True, '2025-07-11', '2025-07-11', 'PED0051', 15);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (52, 52, 0, False, NULL, '2025-06-27', 'PED0052', 19);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (53, 53, 180.13, True, '2025-05-30', '2025-05-30', 'PED0053', 28);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (54, 54, 246.84, True, '2025-01-31', '2025-01-31', 'PED0054', 17);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (55, 55, 2594.11, True, '2025-01-30', '2025-01-30', 'PED0055', 14);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (56, 56, 1939.26, True, '2025-03-31', '2025-03-31', 'PED0056', 29);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (57, 57, 2171.1, True, '2025-07-06', '2025-07-06', 'PED0057', 7);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (58, 58, 1615.24, True, '2025-04-15', '2025-04-15', 'PED0058', 8);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (59, 59, 954.1, True, '2025-04-14', '2025-04-14', 'PED0059', 8);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (60, 60, 1792.01, True, '2025-04-30', '2025-04-30', 'PED0060', 14);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (61, 61, 3186.05, True, '2025-07-05', '2025-07-05', 'PED0061', 7);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (62, 62, 641.3, True, '2025-07-07', '2025-07-07', 'PED0062', 8);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (63, 63, 0, False, NULL, '2025-02-01', 'PED0063', 28);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (64, 64, 523.03, True, '2025-01-27', '2025-01-27', 'PED0064', 13);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (65, 65, 2160.33, True, '2025-04-27', '2025-04-27', 'PED0065', 25);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (66, 66, 86.96, True, '2025-06-24', '2025-06-24', 'PED0066', 25);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (67, 67, 0, False, NULL, '2025-06-10', 'PED0067', 6);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (68, 68, 1934.86, True, '2025-03-19', '2025-03-19', 'PED0068', 22);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (69, 69, 0, False, NULL, '2025-03-07', 'PED0069', 27);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (70, 70, 3147.44, True, '2025-04-25', '2025-04-25', 'PED0070', 4);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (71, 71, 1556.46, True, '2025-02-01', '2025-02-01', 'PED0071', 29);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (72, 72, 2953.42, True, '2025-02-22', '2025-02-22', 'PED0072', 25);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (73, 73, 1829.89, True, '2025-02-01', '2025-02-01', 'PED0073', 12);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (74, 74, 0, False, NULL, '2025-06-30', 'PED0074', 15);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (75, 75, 0, False, NULL, '2025-03-06', 'PED0075', 14);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (76, 76, 0, False, NULL, '2025-06-25', 'PED0076', 4);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (77, 77, 2454.09, True, '2025-04-02', '2025-04-02', 'PED0077', 21);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (78, 78, 0, False, NULL, '2025-06-16', 'PED0078', 18);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (79, 79, 1801.83, True, '2025-04-12', '2025-04-12', 'PED0079', 25);
-INSERT INTO Pagamento_Pedido (Id_pagamento, Id_Pedido, Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente) VALUES (80, 80, 0, False, NULL, '2025-05-13', 'PED0080', 28);
+INSERT INTO Cliente (Nome, CPF, E_mail, Telefone)
+VALUES 
+('Cecília Pinto', '261.895.074-76', 'cecília.pinto@exemplo.com', NULL),
+('Sr. Vitor Hugo Teixeira', '015.678.394-01', 'sr..vitor.hugo.teixeira@exemplo.com', NULL),
+('Ana Beatriz Fogaça', '846.975.120-49', 'ana.beatriz.fogaça@exemplo.com', NULL),
+('Ian Correia', '841.973.052-14', 'ian.correia@exemplo.com', NULL),
+('Vicente Farias', '983.625.047-65', 'vicente.farias@exemplo.com', NULL),
+('Nicole Pinto', '394.702.561-07', 'nicole.pinto@exemplo.com', '(081) 2694-1195'),
+('Pietro Costa', '204.657.139-80', 'pietro.costa@exemplo.com', '21 0295 7385'),
+('Benjamin da Luz', '281.436.597-55', 'benjamin.da.luz@exemplo.com', '81 6627-8776'),
+('Ana Carolina Nascimento', '529.307.618-30', 'ana.carolina.nascimento@exemplo.com', '0800 821 8262'),
+('Alícia Peixoto', '974.352.810-50', 'alícia.peixoto@exemplo.com', '0300-637-1155'),
+('Thomas Duarte', '420.871.536-71', 'thomas.duarte@exemplo.com', '84 3692 1721'),
+('Stephany Novaes', '947.506.128-20', 'stephany.novaes@exemplo.com', '(011) 9245-1495'),
+('Levi Dias', '275.081.649-11', 'levi.dias@exemplo.com', '11 0640 8566'),
+('Ana Júlia Pires', '453.281.076-08', 'ana.júlia.pires@exemplo.com', '+55 (061) 8194 9366'),
+('Olivia da Cunha', '485.902.761-20', 'olivia.da.cunha@exemplo.com', '+55 (051) 1812-2833'),
+('Rodrigo Pereira', '308.169.524-42', 'rodrigo.pereira@exemplo.com', '+55 (071) 7587-7631'),
+('Dra. Clara Cardoso', '631.759.402-34', 'dra..clara.cardoso@exemplo.com', '+55 41 5426 9755'),
+('Luiz Fernando da Costa', '597.014.862-85', 'luiz.fernando.da.costa@exemplo.com', '41 6830-1509'),
+('Igor Aragão', '273.946.508-47', 'igor.aragão@exemplo.com', '11 0712-7896'),
+('Dra. Emilly Porto', '208.615.347-35', 'dra..emilly.porto@exemplo.com', '+55 (061) 4436-7100'),
+('Emanuel Lima', '548.291.703-79', 'emanuel.lima@exemplo.com', '(081) 6080-3599'),
+('João Pedro da Cruz', '145.876.203-35', 'joão.pedro.da.cruz@exemplo.com', '+55 71 3273 2932'),
+('Srta. Stella Melo', '086.541.927-20', 'srta..stella.melo@exemplo.com', '0500 095 2662'),
+('Calebe Vieira', '287.049.653-29', 'calebe.vieira@exemplo.com', '+55 84 2127 5975'),
+('Dra. Vitória Moraes', '409.632.175-34', 'dra..vitória.moraes@exemplo.com', '+55 (081) 0871 1616'),
+('Vitor Gabriel Porto', '672.940.531-70', 'vitor.gabriel.porto@exemplo.com', '(081) 7835 0848'),
+('Maria Alice Peixoto', '346.092.187-04', 'maria.alice.peixoto@exemplo.com', '(061) 9495 7666'),
+('Ana Júlia Monteiro', '249.760.835-00', 'ana.júlia.monteiro@exemplo.com', '+55 84 6142-8822'),
+('Giovanna Martins', '815.790.426-94', 'giovanna.martins@exemplo.com', '+55 11 4632 3014'),
+('Marina da Mata', '912.850.673-12', 'marina.da.mata@exemplo.com', '+55 71 3337-4031');
+-- INSERTS PARA TABELA Pedido_pagamento
+INSERT INTO Pedido_pagamento (Valor_pago, Pagamento_efetuado, Data_pagamento, Data_pedido, Nr_pedido, Id_cliente)
+VALUES
+(2333.4, True, '2025-02-19', '2025-02-19', 'PED0001', 10),
+(1613.91, True, '2025-05-26', '2025-05-26', 'PED0002', 9),
+(569.08, True, '2025-04-03', '2025-04-03', 'PED0003', 18),
+(404.47, True, '2025-06-17', '2025-06-17', 'PED0004', 27),
+(2436.57, True, '2025-05-08', '2025-05-08', 'PED0005', 7),
+(2043.45, True, '2025-03-29', '2025-03-29', 'PED0006', 24),
+(0, False, NULL, '2025-01-26', 'PED0007', 20),
+(350.0, True, '2025-02-17', '2025-02-17', 'PED0008', 25),
+(4993.19, True, '2025-05-28', '2025-05-28', 'PED0009', 17),
+(0, False, NULL, '2025-02-12', 'PED0010', 1),
+(3454.52, True, '2025-02-04', '2025-02-04', 'PED0011', 5),
+(82.74, True, '2025-04-28', '2025-04-28', 'PED0012', 29),
+(122.18, True, '2025-01-17', '2025-01-17', 'PED0013', 19),
+(3632.82, True, '2025-03-17', '2025-03-17', 'PED0014', 17),
+(1772.82, True, '2025-01-30', '2025-01-30', 'PED0015', 22),
+(1276.64, True, '2025-04-13', '2025-04-13', 'PED0016', 7),
+(1749.56, True, '2025-05-11', '2025-05-11', 'PED0017', 2),
+(2323.41, True, '2025-06-14', '2025-06-14', 'PED0018', 1),
+(199.35, True, '2025-05-09', '2025-05-09', 'PED0019', 10),
+(983.64, True, '2025-07-08', '2025-07-08', 'PED0020', 19),
+(0, False, NULL, '2025-02-24', 'PED0021', 20),
+(1257.48, True, '2025-05-28', '2025-05-28', 'PED0022', 11),
+(1773.78, True, '2025-06-27', '2025-06-27', 'PED0023', 18),
+(2016.11, True, '2025-06-12', '2025-06-12', 'PED0024', 20),
+(329.28, True, '2025-04-24', '2025-04-24', 'PED0025', 9),
+(1665.52, True, '2025-05-29', '2025-05-29', 'PED0026', 9),
+(0, False, NULL, '2025-06-01', 'PED0027', 25),
+(1980.12, True, '2025-02-12', '2025-02-12', 'PED0028', 27),
+(1903.92, True, '2025-06-01', '2025-06-01', 'PED0029', 25),
+(478.91, True, '2025-03-19', '2025-03-19', 'PED0030', 6),
+(1279.38, True, '2025-06-16', '2025-06-16', 'PED0031', 7),
+(2439.89, True, '2025-03-13', '2025-03-13', 'PED0032', 9),
+(973.81, True, '2025-02-05', '2025-02-05', 'PED0033', 19),
+(420.26, True, '2025-05-22', '2025-05-22', 'PED0034', 29),
+(1791.14, True, '2025-03-20', '2025-03-20', 'PED0035', 22),
+(1738.98, True, '2025-03-12', '2025-03-12', 'PED0036', 20),
+(1595.72, True, '2025-03-15', '2025-03-15', 'PED0037', 15),
+(1254.77, True, '2025-02-26', '2025-02-26', 'PED0038', 17),
+(1776.84, True, '2025-03-07', '2025-03-07', 'PED0039', 20),
+(447.4, True, '2025-02-11', '2025-02-11', 'PED0040', 16),
+(2842.46, True, '2025-04-17', '2025-04-17', 'PED0041', 6),
+(2907.68, True, '2025-02-15', '2025-02-15', 'PED0042', 20),
+(1717.44, True, '2025-05-26', '2025-05-26', 'PED0043', 21),
+(82.94, True, '2025-05-24', '2025-05-24', 'PED0044', 8),
+(0, False, NULL, '2025-04-24', 'PED0045', 14),
+(2479.78, True, '2025-07-09', '2025-07-09', 'PED0046', 25),
+(3635.05, True, '2025-05-12', '2025-05-12', 'PED0047', 13),
+(587.28, True, '2025-03-23', '2025-03-23', 'PED0048', 5),
+(612.44, True, '2025-04-27', '2025-04-27', 'PED0049', 11),
+(1273.84, True, '2025-03-07', '2025-03-07', 'PED0050', 8),
+(1928.87, True, '2025-07-11', '2025-07-11', 'PED0051', 15),
+(0, False, NULL, '2025-06-27', 'PED0052', 19),
+(180.13, True, '2025-05-30', '2025-05-30', 'PED0053', 28),
+(246.84, True, '2025-01-31', '2025-01-31', 'PED0054', 17),
+(2594.11, True, '2025-01-30', '2025-01-30', 'PED0055', 14),
+(1939.26, True, '2025-03-31', '2025-03-31', 'PED0056', 29),
+(2171.1, True, '2025-07-06', '2025-07-06', 'PED0057', 7),
+(1615.24, True, '2025-04-15', '2025-04-15', 'PED0058', 8),
+(954.1, True, '2025-04-14', '2025-04-14', 'PED0059', 8),
+(1792.01, True, '2025-04-30', '2025-04-30', 'PED0060', 14),
+(3186.05, True, '2025-07-05', '2025-07-05', 'PED0061', 7),
+(641.3, True, '2025-07-07', '2025-07-07', 'PED0062', 8),
+( 0, False, NULL, '2025-02-01', 'PED0063', 28),
+(523.03, True, '2025-01-27', '2025-01-27', 'PED0064', 13),
+(2160.33, True, '2025-04-27', '2025-04-27', 'PED0065', 25),
+(86.96, True, '2025-06-24', '2025-06-24', 'PED0066', 25),
+(0, False, NULL, '2025-06-10', 'PED0067', 6),
+(1934.86, True, '2025-03-19', '2025-03-19', 'PED0068', 22),
+(0, False, NULL, '2025-03-07', 'PED0069', 27),
+(3147.44, True, '2025-04-25', '2025-04-25', 'PED0070', 4),
+(1556.46, True, '2025-02-01', '2025-02-01', 'PED0071', 29),
+(2953.42, True, '2025-02-22', '2025-02-22', 'PED0072', 25),
+(1829.89, True, '2025-02-01', '2025-02-01', 'PED0073', 12),
+(0, False, NULL, '2025-06-30', 'PED0074', 15),
+(0, False, NULL, '2025-03-06', 'PED0075', 14),
+(0, False, NULL, '2025-06-25', 'PED0076', 4),
+(2454.09, True, '2025-04-02', '2025-04-02', 'PED0077', 21),
+(0, False, NULL, '2025-06-16', 'PED0078', 18),
+(1801.83, True, '2025-04-12', '2025-04-12', 'PED0079', 25),
+(0, False, NULL, '2025-05-13', 'PED0080', 28);
 -- INSERTS PARA TABELA Itens_Pedido
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (1, 1, 24, 5, 104.22);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (1, 1, 5, 1, 334.02);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (1, 1, 50, 3, 492.76);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (2, 2, 11, 3, 184.08);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (2, 2, 43, 3, 353.89);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (3, 3, 30, 4, 142.27);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (4, 4, 15, 1, 404.47);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (5, 5, 46, 3, 114.19);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (5, 5, 32, 4, 443.49);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (5, 5, 42, 4, 80.01);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (6, 6, 26, 3, 117.47);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (6, 6, 9, 5, 251.82);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (6, 6, 49, 1, 431.94);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (7, 7, 39, 4, 269.27);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (7, 7, 36, 1, 343.34);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (8, 8, 19, 4, 87.5);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (9, 9, 20, 5, 308.4);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (9, 9, 10, 3, 383.63);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (9, 9, 35, 5, 460.06);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (10, 10, 20, 2, 38.38);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (10, 10, 37, 1, 51.97);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (11, 11, 11, 3, 268.56);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (11, 11, 39, 4, 482.54);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (11, 11, 35, 2, 359.34);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (12, 12, 16, 2, 41.37);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (13, 13, 46, 1, 122.18);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (14, 14, 32, 2, 274.22);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (14, 14, 47, 5, 292.34);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (14, 14, 16, 4, 405.67);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (15, 15, 27, 4, 433.28);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (15, 15, 4, 1, 39.7);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (16, 16, 9, 4, 99.91);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (16, 16, 30, 2, 438.5);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (17, 17, 1, 1, 463.92);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (17, 17, 16, 2, 209.14);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (17, 17, 31, 2, 433.68);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (18, 18, 30, 3, 217.27);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (18, 18, 47, 5, 334.32);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (19, 19, 38, 5, 39.87);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (20, 20, 11, 1, 480.78);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (20, 20, 6, 2, 43.58);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (20, 20, 5, 2, 207.85);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (21, 21, 38, 5, 266.16);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (21, 21, 17, 2, 338.17);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (21, 21, 21, 2, 140.15);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (22, 22, 1, 4, 314.37);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (23, 23, 9, 3, 441.62);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (23, 23, 16, 3, 149.64);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (24, 24, 34, 1, 337.25);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (24, 24, 36, 3, 466.56);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (24, 24, 7, 2, 139.59);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (25, 25, 46, 3, 109.76);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (26, 26, 6, 4, 416.38);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (27, 27, 11, 4, 280.32);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (27, 27, 28, 5, 14.74);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (28, 28, 10, 4, 72.45);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (28, 28, 20, 3, 450.5);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (28, 28, 3, 3, 112.94);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (29, 29, 40, 2, 463.62);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (29, 29, 16, 2, 488.34);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (30, 30, 27, 2, 140.73);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (30, 30, 45, 1, 197.45);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (31, 31, 23, 3, 412.06);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (31, 31, 15, 2, 21.6);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (32, 32, 23, 5, 205.84);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (32, 32, 35, 3, 470.23);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (33, 33, 3, 1, 302.32);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (33, 33, 23, 3, 223.83);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (34, 34, 3, 4, 10.83);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (34, 34, 35, 2, 188.47);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (35, 35, 20, 5, 161.55);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (35, 35, 27, 3, 207.18);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (35, 35, 19, 5, 72.37);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (36, 36, 36, 1, 158.9);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (36, 36, 14, 4, 395.02);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (37, 37, 33, 4, 398.93);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (38, 38, 22, 1, 411.03);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (38, 38, 49, 2, 339.67);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (38, 38, 15, 2, 82.2);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (39, 39, 30, 4, 444.21);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (40, 40, 42, 1, 447.4);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (41, 41, 34, 4, 34.61);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (41, 41, 16, 1, 233.67);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (41, 41, 30, 5, 494.07);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (42, 42, 28, 5, 228.5);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (42, 42, 11, 4, 230.53);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (42, 42, 49, 2, 421.53);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (43, 43, 5, 3, 124.9);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (43, 43, 22, 3, 447.58);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (44, 44, 46, 2, 41.47);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (45, 45, 25, 5, 473.57);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (45, 45, 2, 5, 196.39);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (46, 46, 35, 5, 401.94);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (46, 46, 15, 4, 117.52);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (47, 47, 26, 2, 421.85);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (47, 47, 9, 5, 271.72);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (47, 47,4 , 3, 195.76);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (48, 48, 4, 3, 195.76);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (49, 49, 18, 4, 133.61);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (49, 49, 6, 4, 19.5);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (50, 50, 3, 1, 475.31);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (50, 50, 13, 1, 314.45);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (50, 50, 16, 2, 242.04);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (51, 51, 11, 5, 307.55);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (51, 51, 48, 1, 391.12);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (52, 52, 37, 4, 204.36);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (52, 52, 46, 2, 47.24);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (53, 53, 37, 1, 180.13);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (54, 54, 27, 4, 61.71);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (55, 55, 42, 3, 311.8);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (55, 55, 35, 4, 237.79);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (55, 55, 47, 5, 141.51);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (56, 56, 37, 5, 337.41);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (56, 56, 22, 1, 252.21);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (57, 57, 22, 3, 441.36);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (57, 57, 45, 3, 282.34);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (58, 58, 36, 2, 348.4);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (58, 58, 42, 4, 229.61);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (59, 59, 20, 5, 190.82);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (60, 60, 22, 3, 354.4);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (60, 60, 18, 3, 133.19);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (60, 60, 8, 2, 164.62);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (61, 61, 47, 5, 488.54);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (61, 61, 34, 5, 148.67);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (62, 62, 1, 5, 72.03);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (62, 62, 3, 1, 281.15);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (63, 63, 31, 4, 225.83);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (63, 63, 12, 1, 133.71);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (64, 64, 41, 1, 84.35);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (64, 64, 37, 3, 51.74);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (64, 64, 16, 1, 283.46);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (65, 65, 29, 3, 431.48);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (65, 65, 28, 3, 288.63);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (66, 66, 17, 1, 86.96);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (67, 67, 45, 5, 240.26);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (67, 67, 3, 2, 151.17);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (68, 68, 41, 5, 333.98);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (68, 68, 13, 4, 66.24);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (69, 69, 11, 3, 301.57);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (70, 70, 45, 4, 471.91);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (70, 70, 33, 5, 251.96);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (71, 71, 39, 3, 22.67);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (71, 71, 15, 5, 297.69);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (72, 72, 34, 4, 458.88);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (72, 72, 12, 5, 223.58);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (73, 73, 43, 1, 430.29);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (73, 73, 22, 4, 349.9);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (74, 74, 21, 1, 485.39);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (74, 74, 26, 5, 414.21);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (75, 75, 24, 5, 380.66);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (75, 75, 41, 4, 382.4);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (75, 75, 14, 3, 279.12);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (76, 76, 39, 2, 357.79);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (76, 76, 20, 5, 16.7);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (76, 76, 27, 1, 120.1);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (77, 77, 46, 3, 259.35);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (77, 77, 18, 4, 419.01);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (78, 78, 39, 5, 375.68);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (79, 79, 22, 5, 140.91);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (79, 79, 1, 3, 365.76);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (80, 80, 31, 3, 172.9);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (80, 80, 49, 5, 194.83);
-INSERT INTO Itens_Pedido (Id_pagamento, Id_Pedido, Id_Produto, Quantidade, Valor_unitario) VALUES (80, 80, 21, 2, 490.58);
+INSERT INTO Itens_Pedido (Id_Pedido_pagamento,  Id_Produto, Quantidade, Valor_unitario) 
+VALUES 
+(1, 24, 5, 104.22),
+(1, 5, 1, 334.02),
+(1, 50, 3, 492.76),
+(2, 11, 3, 184.08),
+(2, 43, 3, 353.89),
+(3, 30, 4, 142.27),
+(4, 15, 1, 404.47),
+(5, 46, 3, 114.19),
+(5, 32, 4, 443.49),
+(5, 42, 4, 80.01),
+(6, 26, 3, 117.47),
+(6, 9, 5, 251.82),
+(6, 49, 1, 431.94),
+(7, 39, 4, 269.27),
+(7, 36, 1, 343.34),
+(8, 19, 4, 87.5),
+(9, 20, 5, 308.4),
+(9, 10, 3, 383.63),
+(9, 35, 5, 460.06),
+(10, 20, 2, 38.38),
+(10, 37, 1, 51.97),
+(11, 11, 3, 268.56),
+(11, 39, 4, 482.54),
+(11, 35, 2, 359.34),
+(12, 16, 2, 41.37),
+(13, 46, 1, 122.18),
+(14, 32, 2, 274.22),
+(14, 47, 5, 292.34),
+(14, 16, 4, 405.67),
+(15, 27, 4, 433.28),
+(15, 4, 1, 39.7),
+(16, 9, 4, 99.91),
+(16, 30, 2, 438.5),
+(17, 1, 1, 463.92),
+(17, 16, 2, 209.14),
+(17, 31, 2, 433.68),
+(18, 30, 3, 217.27),
+(18, 47, 5, 334.32),
+(19, 38, 5, 39.87),
+(20, 11, 1, 480.78),
+(20, 6, 2, 43.58),
+(20, 5, 2, 207.85),
+(21, 38, 5, 266.16),
+(21, 17, 2, 338.17),
+(21, 21, 2, 140.15),
+(22, 1, 4, 314.37),
+(23, 9, 3, 441.62),
+(23, 16, 3, 149.64),
+(24, 34, 1, 337.25),
+(24, 36, 3, 466.56),
+(24, 7, 2, 139.59),
+(25, 46, 3, 109.76),
+(26, 6, 4, 416.38),
+(27, 11, 4, 280.32),
+(27, 28, 5, 14.74),
+(28, 10, 4, 72.45),
+(28, 20, 3, 450.5),
+(28, 3, 3, 112.94),
+(29, 40, 2, 463.62),
+(29, 16, 2, 488.34),
+(30, 27, 2, 140.73),
+(30, 45, 1, 197.45),
+(31, 23, 3, 412.06),
+(31, 15, 2, 21.6),
+(32, 23, 5, 205.84),
+(32, 35, 3, 470.23),
+(33, 3, 1, 302.32),
+(33, 23, 3, 223.83),
+(34, 3, 4, 10.83),
+(34, 35, 2, 188.47),
+(35, 20, 5, 161.55),
+(35, 27, 3, 207.18),
+(35, 19, 5, 72.37),
+(36, 36, 1, 158.9),
+(36, 14, 4, 395.02),
+(37, 33, 4, 398.93),
+(38, 22, 1, 411.03),
+(38, 49, 2, 339.67),
+(38, 15, 2, 82.2),
+(39, 30, 4, 444.21),
+(40, 42, 1, 447.4),
+(41, 34, 4, 34.61),
+(41, 16, 1, 233.67),
+(41, 30, 5, 494.07),
+(42, 28, 5, 228.5),
+(42, 11, 4, 230.53),
+(42, 49, 2, 421.53),
+(43, 5, 3, 124.9),
+(43, 22, 3, 447.58),
+(44, 46, 2, 41.47),
+(45, 25, 5, 473.57),
+(45, 2, 5, 196.39),
+(46, 35, 5, 401.94),
+(46, 15, 4, 117.52),
+(47, 26, 2, 421.85),
+(47, 9, 5, 271.72),
+(47, 4, 3, 195.76),
+(48, 4, 3, 195.76),
+(49, 18, 4, 133.61),
+(49, 6, 4, 19.5),
+(50, 3, 1, 475.31),
+(50, 13, 1, 314.45),
+(50, 16, 2, 242.04),
+(51, 11, 5, 307.55),
+(51, 48, 1, 391.12),
+(52, 37, 4, 204.36),
+(52, 46, 2, 47.24),
+(53, 37, 1, 180.13),
+(54, 27, 4, 61.71),
+(55, 42, 3, 311.8),
+(55, 35, 4, 237.79),
+(55, 47, 5, 141.51),
+(56, 37, 5, 337.41),
+(56, 22, 1, 252.21),
+(57, 22, 3, 441.36),
+(57, 45, 3, 282.34),
+(58, 36, 2, 348.4),
+(58, 42, 4, 229.61),
+(59, 20, 5, 190.82),
+(60, 22, 3, 354.4),
+(60, 18, 3, 133.19),
+(60, 8, 2, 164.62),
+(61, 47, 5, 488.54),
+(61, 34, 5, 148.67),
+(62, 1, 5, 72.03),
+(62, 3, 1, 281.15),
+(63, 31, 4, 225.83),
+(63, 12, 1, 133.71),
+(64, 41, 1, 84.35),
+(64, 37, 3, 51.74),
+(64, 16, 1, 283.46),
+(65, 29, 3, 431.48),
+(65, 28, 3, 288.63),
+(66, 17, 1, 86.96),
+(67, 45, 5, 240.26),
+(67, 3, 2, 151.17),
+(68, 41, 5, 333.98),
+(68, 13, 4, 66.24),
+(69, 11, 3, 301.57),
+(70, 45, 4, 471.91),
+(70, 33, 5, 251.96),
+(71, 39, 3, 22.67),
+(71, 15, 5, 297.69),
+(72, 34, 4, 458.88),
+(72, 12, 5, 223.58),
+(73, 43, 1, 430.29),
+(73, 22, 4, 349.9),
+(74, 21, 1, 485.39),
+(74, 26, 5, 414.21),
+(75, 24, 5, 380.66),
+(75, 41, 4, 382.4),
+(75, 14, 3, 279.12),
+(76, 39, 2, 357.79),
+(76, 20, 5, 16.7),
+(76, 27, 1, 120.1),
+(77, 46, 3, 259.35),
+(77, 18, 4, 419.01),
+(78, 39, 5, 375.68),
+(79, 22, 5, 140.91),
+(79, 1, 3, 365.76),
+(80, 31, 3, 172.9),
+(80, 49, 5, 194.83),
+(80, 21, 2, 490.58);
+
 -- INSERTS PARA TABELA Entrega
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-02-21', '2025-02-23', 1, 1);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-05-27', '2025-06-06', 2, 2);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-04-08', '2025-04-12', 3, 3);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-06-21', '2025-06-26', 4, 4);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-05-10', '2025-05-14', 5, 5);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-03-31', '2025-04-03', 6, 6);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-02-18', '2025-02-23', 8, 8);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-06-02', '2025-06-08', 9, 9);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-02-08', '2025-02-14', 11, 11);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-04-29', '2025-05-09', 12, 12);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-01-18', '2025-01-24', 13, 13);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-03-19', '2025-03-21', 14, 14);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-02-02', '2025-02-04', 15, 15);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-04-14', '2025-04-22', 16, 16);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-05-12', '2025-05-15', 17, 17);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-06-18', '2025-06-21', 18, 18);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-05-12', '2025-05-13', 19, 19);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-07-13', '2025-07-17', 20, 20);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-06-02', '2025-06-04', 22, 22);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-07-01', '2025-07-10', 23, 23);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-06-13', '2025-06-22', 24, 24);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-04-27', '2025-05-06', 25, 25);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-05-30', '2025-05-31', 26, 26);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-02-14', '2025-02-16', 28, 28);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-06-03', '2025-06-10', 29, 29);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-03-20', '2025-03-28', 30, 30);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-06-18', '2025-06-25', 31, 31);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-03-14', '2025-03-19', 32, 32);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-02-10', '2025-02-12', 33, 33);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-05-23', '2025-05-29', 34, 34);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-03-24', '2025-03-31', 35, 35);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-03-17', '2025-03-23', 36, 36);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-03-17', '2025-03-19', 37, 37);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-02-27', '2025-03-03', 38, 38);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-03-12', '2025-03-16', 39, 39);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-02-12', '2025-02-19', 40, 40);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-04-22', '2025-04-28', 41, 41);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-02-18', '2025-02-27', 42, 42);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-05-27', '2025-05-30', 43, 43);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-05-28', '2025-06-03', 44, 44);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-07-13', '2025-07-21', 46, 46);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-05-13', '2025-05-15', 47, 47);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-03-25', '2025-04-02', 48, 48);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-05-02', '2025-05-03', 49, 49);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-03-08', '2025-03-18', 50, 50);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-07-13', '2025-07-18', 51, 51);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-06-03', '2025-06-09', 53, 53);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-02-03', '2025-02-11', 54, 54);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-02-01', '2025-02-03', 55, 55);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-04-03', '2025-04-06', 56, 56);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-07-11', '2025-07-15', 57, 57);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-04-16', '2025-04-18', 58, 58);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-04-19', '2025-04-28', 59, 59);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-05-05', '2025-05-08', 60, 60);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-07-06', '2025-07-10', 61, 61);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-07-09', '2025-07-17', 62, 62);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-01-31', '2025-02-10', 64, 64);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-04-28', '2025-05-08', 65, 65);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-06-26', '2025-07-05', 66, 66);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-03-21', '2025-03-24', 68, 68);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-04-26', '2025-05-06', 70, 70);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-02-26', '2025-02-28', 72, 72);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-02-04', '2025-02-11', 73, 73);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-04-06', '2025-04-10', 77, 77);
-INSERT INTO Entrega ( Data_envio, Data_entrega, Id_pagamento, Id_Pedido) VALUES ( '2025-04-17', '2025-04-27', 79, 79);
+INSERT INTO Entrega ( Data_envio, Data_entrega, Id_Pedido_pagamento)
+VALUES
+( '2025-02-21', '2025-02-23', 1),
+( '2025-05-27', '2025-06-06', 2),
+( '2025-04-08', '2025-04-12', 3),
+( '2025-06-21', '2025-06-26', 4),
+( '2025-05-10', '2025-05-14', 5),
+( '2025-03-31', '2025-04-03', 6),
+( '2025-02-18', '2025-02-23', 8),
+( '2025-06-02', '2025-06-08', 9),
+( '2025-02-08', '2025-02-14', 11),
+( '2025-04-29', '2025-05-09', 12),
+( '2025-01-18', '2025-01-24', 13),
+( '2025-03-19', '2025-03-21', 14),
+( '2025-02-02', '2025-02-04', 15),
+( '2025-04-14', '2025-04-22', 16),
+( '2025-05-12', '2025-05-15', 17),
+( '2025-06-18', '2025-06-21', 18),
+( '2025-05-12', '2025-05-13', 19),
+( '2025-07-13', '2025-07-17', 20),
+( '2025-06-02', '2025-06-04', 22),
+( '2025-07-01', '2025-07-10', 23),
+( '2025-06-13', '2025-06-22', 24),
+( '2025-04-27', '2025-05-06', 25),
+( '2025-05-30', '2025-05-31', 26),
+( '2025-02-14', '2025-02-16', 28),
+( '2025-06-03', '2025-06-10', 29),
+( '2025-03-20', '2025-03-28', 30),
+( '2025-06-18', '2025-06-25', 31),
+( '2025-03-14', '2025-03-19', 32),
+( '2025-02-10', '2025-02-12', 33),
+( '2025-05-23', '2025-05-29', 34),
+( '2025-03-24', '2025-03-31', 35),
+( '2025-03-17', '2025-03-23', 36),
+( '2025-03-17', '2025-03-19', 37),
+( '2025-02-27', '2025-03-03', 38),
+( '2025-03-12', '2025-03-16', 39),
+( '2025-02-12', '2025-02-19', 40),
+( '2025-04-22', '2025-04-28', 41),
+( '2025-02-18', '2025-02-27', 42),
+( '2025-05-27', '2025-05-30', 43),
+( '2025-05-28', '2025-06-03', 44),
+( '2025-07-13', '2025-07-21', 46),
+( '2025-05-13', '2025-05-15', 47),
+( '2025-03-25', '2025-04-02', 48),
+( '2025-05-02', '2025-05-03', 49),
+( '2025-03-08', '2025-03-18', 50),
+( '2025-07-13', '2025-07-18', 51),
+( '2025-06-03', '2025-06-09', 53),
+( '2025-02-03', '2025-02-11', 54),
+( '2025-02-01', '2025-02-03', 55),
+( '2025-04-03', '2025-04-06', 56),
+( '2025-07-11', '2025-07-15', 57),
+( '2025-04-16', '2025-04-18', 58),
+( '2025-04-19', '2025-04-28', 59),
+( '2025-05-05', '2025-05-08', 60),
+( '2025-07-06', '2025-07-10', 61),
+( '2025-07-09', '2025-07-17', 62),
+( '2025-01-31', '2025-02-10', 64),
+( '2025-04-28', '2025-05-08', 65),
+( '2025-06-26', '2025-07-05', 66),
+( '2025-03-21', '2025-03-24', 68),
+( '2025-04-26', '2025-05-06', 70),
+( '2025-02-26', '2025-02-28', 72),
+( '2025-02-04', '2025-02-11', 73),
+( '2025-04-06', '2025-04-10', 77),
+( '2025-04-17', '2025-04-27', 79);
 -- INSERTS PARA TABELA Forma_pagamento
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 1, 1);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Cartao', 2, 2);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Debito', 3, 3);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 4, 4);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Debito', 5, 5);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 6, 6);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Cartao', 8, 8);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 9, 9);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 11, 11);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Cartao', 12, 12);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 13, 13);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 14, 14);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Cartao', 15, 15);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 16, 16);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 17, 17);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Cartao', 18, 18);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 19, 19);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 20, 20);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 22, 22);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Debito', 23, 23);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Cartao', 24, 24);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 25, 25);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Debito', 26, 26);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Debito', 28, 28);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 29, 29);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Cartao', 30, 30);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Debito', 31, 31);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Cartao', 32, 32);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 33, 33);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Debito', 34, 34);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Cartao', 35, 35);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 36, 36);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Debito', 37, 37);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 38, 38);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 39, 39);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Cartao', 40, 40);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 41, 41);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 42, 42);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Cartao', 43, 43);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 44, 44);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 46, 46);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 47, 47);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Debito', 48, 48);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Debito', 49, 49);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Cartao', 50, 50);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 51, 51);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 53, 53);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Cartao', 54, 54);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Debito', 55, 55);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 56, 56);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 57, 57);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Debito', 58, 58);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Debito', 59, 59);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Cartao', 60, 60);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Debito', 61, 61);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 62, 62);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Cartao', 64, 64);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 65, 65);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 66, 66);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Debito', 68, 68);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 70, 70);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 71, 71);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 72, 72);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Pix', 73, 73);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 77, 77);
-INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_pagamento, Id_Pedido) VALUES ( 'Boleto', 79, 79);
+INSERT INTO Forma_pagamento ( Tipo_pagamento, Id_Pedido_pagamento) 
+VALUES 
+( 'Boleto', 1),
+( 'Cartao', 2),
+( 'Debito', 3),
+( 'Pix', 4),
+( 'Debito', 5),
+( 'Boleto', 6),
+( 'Cartao', 8),
+( 'Boleto', 9),
+( 'Boleto', 11),
+( 'Cartao', 12),
+( 'Pix', 13),
+( 'Pix', 14),
+( 'Cartao', 15),
+( 'Pix', 16),
+( 'Boleto', 17),
+( 'Cartao', 18),
+( 'Pix', 19),
+( 'Pix', 20),
+( 'Pix', 22),
+( 'Debito', 23),
+( 'Cartao', 24),
+( 'Boleto', 25),
+ ( 'Debito', 26),
+( 'Debito', 28),
+( 'Pix', 29),
+( 'Cartao', 30),
+( 'Debito', 31),
+( 'Cartao', 32),
+( 'Boleto', 33),
+( 'Debito', 34),
+ ( 'Cartao', 35),
+( 'Boleto', 36),
+( 'Debito', 37),
+( 'Boleto', 38),
+( 'Boleto', 39),
+( 'Cartao', 40),
+( 'Boleto', 41),
+( 'Boleto', 42),
+( 'Cartao', 43),
+( 'Boleto', 44),
+( 'Pix', 46),
+( 'Boleto', 47),
+( 'Debito', 48),
+( 'Debito', 49),
+( 'Cartao', 50),
+( 'Pix', 51),
+ ( 'Pix', 53),
+( 'Cartao', 54),
+( 'Debito', 55),
+( 'Boleto', 56),
+( 'Pix', 57),
+( 'Debito', 58),
+ ( 'Debito', 59),
+( 'Cartao', 60),
+ ( 'Debito', 61),
+ ( 'Pix', 62),
+( 'Cartao', 64),
+( 'Pix', 65),
+( 'Pix', 66),
+( 'Debito', 68),
+( 'Pix', 70),
+ ( 'Pix', 71),
+( 'Boleto', 72),
+( 'Pix', 73),
+( 'Boleto', 77),
+( 'Boleto', 79);
+
+-- 28.4) Deletar o novo fornecedor
+DELETE FROM itens_pedido
+WHERE Id_Itens_Pedido > 80;
+select * from itens_pedido;
