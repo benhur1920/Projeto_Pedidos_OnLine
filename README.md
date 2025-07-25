@@ -1,5 +1,4 @@
-# Projeto_Pedidos_OnLine
-Projeto de MBA de criação de um Banco para Pedidos OnLIne
+
 # 📊 Projeto de Banco de Dados - Projeto Pedidos OnLine
 
 ## 🎓 Turma MBA em Engenharia de Dados
